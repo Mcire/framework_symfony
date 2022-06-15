@@ -491,6 +491,9 @@
     "symfony/yaml": {
         "version": "6.2.x-dev"
     },
+    "symfonycasts/verify-email-bundle": {
+        "version": "v1.10.0"
+    },
     "twig/extra-bundle": {
         "version": "v3.4.0"
     },

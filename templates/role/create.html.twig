@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RoleController!{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="container col-md-6">
+        <div class="card shadow-none p-3 mb-5 bg-light rounded">
+            <div class="card-header text-center bg-primary text-white">Liste des Roles</div>
+            <div class="card-body">
+                <table class="table table-striped table-bordered border-primary">
+                    <thead class="thead-dark text-center text-dark">
+                    <tr>
+                        <th scope="col">Identifiant</th>
+                        <th scope="col">Role</th>
+                    </tr>
+                    </thead>
+                    {% for r in roles %}
+                    <tr>
+                        <th scope="row">{{ r.id }}</th>
+                        <td>{{ r.nomRole}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="card-footer text-center">LPGL</div>
+        </div>
+    </div>
+    <div class="container col-md-6">    
+        <div class="card shadow-none p-3 mb-5 bg-light rounded">
+            <div class="card-header text-center bg-primary text-white">Formulaire de gestion des Roles</div>
+            <div class="card-body">
+                {{ form(form) }}
+            </div>
+            <div class="card-footer text-center">CHE</div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
